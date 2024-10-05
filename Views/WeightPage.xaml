@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistanceAndWeightConverter.Views.WeightPage">
+    <ContentPage.Content>
+                <ScrollView>
+        <Grid Padding="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" /> <!-- Column 0 -->
+                <ColumnDefinition Width="10" /> <!-- Column 1 -->
+                <ColumnDefinition Width="*" /> <!-- Column 2 -->
+            </Grid.ColumnDefinitions>    
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" /> <!-- Row 0 -->
+                <RowDefinition Height="20" /> <!-- Row 1 gap row-->
+                <RowDefinition Height="auto" /> <!-- Row 2-->
+                <RowDefinition Height="20" /> <!-- Row 3 gap row-->
+                <RowDefinition Height="auto" /> <!-- Row 4 -->
+                <RowDefinition Height="20" /> <!-- Row 5 gap row-->
+                <RowDefinition Height="auto" /> <!-- Row 6 -->
+                <RowDefinition Height="60" /> <!-- Row 7 gap row-->
+                <RowDefinition Height="auto" /> <!-- Row 8 -->
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Column="0" Grid.Row="0" Margin="0,5,0,0"  Text="Pounds" />
+            <Entry Grid.Column="2" Grid.Row="0" x:Name="txtPounds" Keyboard="Numeric" TextChanged="TxtPounds_OnTextChanged" />
+            
+            <Label Grid.Column="0" Grid.Row="2" Margin="0,5,0,0" Text="Ounces" />
+            <Entry Grid.Column="2" Grid.Row="2" x:Name="txtOunces" Keyboard="Numeric" TextChanged="TxtOunces_OnTextChanged" />
+            
+            <Label Grid.Column="0" Grid.Row="4" Margin="0,5,0,0" Text="Grams" />
+            <Entry Grid.Column="2" Grid.Row="4" x:Name="txtGrams" Keyboard="Numeric" TextChanged="TxtGrams_OnTextChanged"/>
+            
+            <Label Grid.Column="0" Grid.Row="6" Margin="0,5,0,0" Text="Kiolgrams" />
+            <Entry Grid.Column="2" Grid.Row="6" x:Name="txtKilograms" Keyboard="Numeric" TextChanged="TxtKilograms_OnTextChanged"/>
+            
+            <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8" >
+                <Button Text="Clear" HorizontalOptions="FillAndExpand" Clicked="Clear_OnClicked" />
+                <Button Text="Convert" HorizontalOptions="FillAndExpand" Clicked="Convert_OnClicked" />
+            </StackLayout>
+            
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
